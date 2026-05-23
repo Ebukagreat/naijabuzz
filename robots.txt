@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naijabuzz.netlify.app/sitemap.xml

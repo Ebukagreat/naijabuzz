@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NaijaBuzz – Nigerian News, Finance, Tech & Culture</title>
+  <meta name="description" content="Your #1 source for Nigerian and African news, finance tips, tech updates, health, and entertainment." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5847377708766349" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --brand: #E8420A; --dark: #1A1208; --text: #1c1c1c; --muted: #666; --border: #e5e5e5; --bg: #f5f4f0; --white: #fff; --radius: 10px; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+    a { text-decoration: none; color: inherit; }
+    .site-header { background: var(--dark); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: #fff; font-weight: 900; }
+    .logo span { color: var(--brand); }
+    .nav { display: flex; gap: 1.5rem; }
+    .nav a { color: #bbb; font-size: 13px; font-weight: 500; }
+    .nav a:hover { color: #fff; }
+    .ad-banner { background: #fff; border-bottom: 1px solid var(--border); text-align: center; padding: 12px; }
+    .ad-rect { background: #f7f7f7; border: 1px dashed #ddd; border-radius: 8px; min-height: 90px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #bbb; }
+    .hero { background: var(--dark); padding: 2rem; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+    .hero-main .badge { background: var(--brand); color: #fff; font-size: 11px; padding: 3px 12px; border-radius: 4px; display: inline-block; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero-main h1 { font-family: 'Playfair Display', serif; font-size: 28px; color: #fff; line-height: 1.3; margin-bottom: 10px; }
+    .hero-main p { color: #aaa; font-size: 14px; line-height: 1.6; }
+    .hero-meta { display: flex; gap: 14px; margin-top: 14px; font-size: 13px; color: #777; }
+    .hero-side { display: flex; flex-direction: column; gap: 10px; }
+    .hero-side a { background: rgba(255,255,255,0.07); border-radius: 8px; padding: 12px; display: block; transition: background 0.2s; }
+    .hero-side a:hover { background: rgba(255,255,255,0.12); }
+    .hero-side .cat { font-size: 11px; color: var(--brand); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; font-weight: 500; }
+    .hero-side h3 { font-size: 13px; color: #ddd; line-height: 1.4; font-weight: 500; }
+    .cat-bar { background: #fff; border-bottom: 1px solid var(--border); overflow-x: auto; white-space: nowrap; }
+    .cat-bar-inner { display: inline-flex; padding: 0 2rem; max-width: 1100px; }
+    .cat-tab { padding: 14px 18px; font-size: 13px; font-weight: 500; cursor: pointer; border-bottom: 2px solid transparent; color: var(--muted); display: inline-block; }
+    .cat-tab:hover { color: var(--text); }
+    .main-wrapper { max-width: 1100px; margin: 0 auto; padding: 2rem; display: grid; grid-template-columns: 1fr 300px; gap: 2rem; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .articles { display: flex; flex-direction: column; gap: 1rem; }
+    .article-card { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); padding: 1.25rem; display: flex; gap: 1rem; transition: box-shadow 0.15s; }
+    .article-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-color: #ccc; }
+    .thumb { width: 90px; height: 70px; background: var(--bg); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+    .card-body .tag { font-size: 11px; font-weight: 500; color: var(--brand); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+    .card-body h2 { font-size: 15px; font-weight: 500; line-height: 1.4; margin-bottom: 6px; color: var(--text); }
+    .card-body h2 a { color: inherit; }
+    .card-body h2 a:hover { color: var(--brand); }
+    .card-body p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .card-meta { display: flex; gap: 10px; margin-top: 8px; font-size: 12px; color: #aaa; }
+    .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+    .widget { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); padding: 1.25rem; }
+    .widget-title { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .trend-item { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .trend-item:last-child { border-bottom: none; }
+    .trend-num { font-size: 20px; font-weight: 700; color: #e0e0e0; line-height: 1; width: 22px; flex-shrink: 0; }
+    .trend-item p { font-size: 13px; line-height: 1.4; }
+    .newsletter-input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; margin-bottom: 8px; font-family: 'DM Sans', sans-serif; }
+    .btn-sub { width: 100%; background: var(--brand); color: #fff; border: none; padding: 10px; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+    .site-footer { background: var(--dark); padding: 2rem; text-align: center; margin-top: 3rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; font-weight: 900; margin-bottom: 8px; }
+    .footer-logo span { color: var(--brand); }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 12px 0; flex-wrap: wrap; }
+    .footer-links a { color: #888; font-size: 13px; }
+    .footer-copy { color: #555; font-size: 12px; margin-top: 8px; }
+    @media(max-width:768px) { .nav{display:none;} .hero-inner{grid-template-columns:1fr;} .hero-side{display:none;} .main-wrapper{grid-template-columns:1fr; padding:1rem;} .sidebar{display:none;} }
+  </style>
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="NaijaBuzz" />
+  <meta property="og:title" content="NaijaBuzz - Nigerian News, Finance, Tech and Culture" />
+  <meta property="og:description" content="Your number 1 source for Nigerian and African news, finance tips, tech updates, health, and entertainment." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NaijaBuzz" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://naijabuzz.netlify.app/" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Naija<span>Buzz</span></div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="index.html">Tech</a>
+    <a href="index.html">Finance</a>
+    <a href="index.html">Health</a>
+    <a href="index.html">Entertainment</a>
+    <a href="index.html">Africa</a>
+  </nav>
+</header>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block;width:100%;height:90px;" data-ad-client="ca-pub-5847377708766349" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div style="background:#1A1208;">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-main">
+      <span class="badge">🇳🇬 Nigeria</span>
+      <h1><a href="article-automation.html" style="color:#fff;">Automation as a Way of Life: How AI Is Changing How Nigerians Work, Earn and Live</a></h1>
+      <p>From Lagos offices to Abuja startups, automation is no longer the future — it's already here. Here's what it means for you.</p>
+      <div class="hero-meta"><span>⏱ 6 min read</span><span>👁 12.4k views</span></div>
+    </div>
+    <div class="hero-side">
+      <a href="article-remittance.html"><div class="cat">Finance</div><h3>Dollar to Naira: What You Need to Know Before Sending Money Home</h3></a>
+      <a href="article-african-foods.html"><div class="cat">Health</div><h3>Traditional African Foods That Scientists Now Say Fight Cancer</h3></a>
+      <a href="article-afrobeats.html"><div class="cat">Entertainment</div><h3>Afrobeats Goes Global: How Nigerian Artists Are Conquering Europe and Asia</h3></a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="cat-bar"><div class="cat-bar-inner">
+  <span class="cat-tab">All</span>
+  <span class="cat-tab">Tech & AI</span>
+  <span class="cat-tab">Finance</span>
+  <span class="cat-tab">Health</span>
+  <span class="cat-tab">Entertainment</span>
+  <span class="cat-tab">Naija / Africa</span>
+</div></div>
+
+<div class="main-wrapper">
+  <div>
+    <div class="section-label">Latest Stories</div>
+    <div class="articles">
+
+      <div class="article-card"><div class="thumb">⚙️</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-automation.html">Automation as a Way of Life: How AI Is Quietly Changing How Nigerians Work, Earn and Live</a></h2><p>From Lagos offices to Abuja startups, automation is no longer the future — it's already here.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>12.4k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">💰</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-remittance.html">Dollar to Naira: What You Need to Know Before Sending Money Home</a></h2><p>Exchange rate fluctuations are hitting remittance flows hard. Here's how to protect your money.</p><div class="card-meta"><span>4 min read</span><span>•</span><span>21k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🥗</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-african-foods.html">Traditional African Foods That Scientists Now Say Fight Cancer</a></h2><p>Moringa, egusi, and bitter leaf pack serious health benefits that science is now confirming.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>15.7k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🎵</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-afrobeats.html">Afrobeats Goes Global: How Nigerian Artists Are Conquering Europe and Asia</a></h2><p>Burna Boy, Asake, and a new wave of artists are selling out arenas on every continent.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>33k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🌍</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-african-cities.html">Top 10 African Cities for Young Professionals to Build Wealth in 2026</a></h2><p>Lagos, Nairobi, Accra, and Kigali lead a new era of opportunity for the continent's youth.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>19.3k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">📱</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-smartphones.html">Best Budget Smartphones in Nigeria Under ₦100,000 in 2026</a></h2><p>We tested 12 devices so you don't have to. Here are the ones actually worth buying.</p><div class="card-meta"><span>8 min read</span><span>•</span><span>44k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">📈</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-stocks.html">How to Start Investing in Nigerian Stocks With as Little as ₦5,000</a></h2><p>The NGX All Share Index is up 18% this year. Here's how beginners can get started.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>28k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🎬</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-nollywood.html">Nollywood at 30: How Nigeria Built the World's Second Largest Film Industry</a></h2><p>From VHS tapes in Alaba market to Netflix deals worth millions — the Nollywood story is extraordinary.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>22.5k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🏃</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-vitamind.html">Why Most Nigerians Are Vitamin D Deficient Despite Living in Sunshine</a></h2><p>Doctors are calling it a silent epidemic. Here's what you need to know and what to do.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>11.2k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🚀</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-startups.html">How Nigerian Startups Are Reshaping Africa's $150B Digital Economy</a></h2><p>From Flutterwave to Paystack, homegrown fintechs are drawing global investors and creating jobs.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>12.4k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🏠</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-rentvsbuy.html">Rent vs Buy: What Makes More Financial Sense in Lagos Right Now</a></h2><p>With property prices soaring and mortgage rates unpredictable, we crunch the numbers.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>17.3k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🔐</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-fraud.html">How to Protect Yourself From Online Fraud in Nigeria in 2026</a></h2><p>Cybercrime targeting Nigerians is at an all-time high. Here's how to stay safe.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>38.1k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🧠</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-mentalhealth.html">Mental Health in Nigeria: Why We Must Stop Suffering in Silence</a></h2><p>One in four Nigerians will experience a mental health condition. Stigma keeps millions from help.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>24.8k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">⚡</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-powercrisis.html">Nigeria's Power Crisis: Why the Lights Keep Going Out and What Can Fix It</a></h2><p>After decades of promises, electricity supply remains Nigeria's most stubborn problem.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>31.2k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">📺</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-creators.html">The Rise of Nigerian Content Creators: How YouTubers and TikTokers Are Earning Millions</a></h2><p>Nigerian creators are turning views into serious income. Here's how they do it.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>29.4k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">💻</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-coding.html">How to Learn Coding in Nigeria for Free and Get a Remote Job in 6 Months</a></h2><p>Thousands of Nigerians are landing $2,000/month remote jobs with zero university degree.</p><div class="card-meta"><span>8 min read</span><span>•</span><span>52.7k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">💳</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-savingsapps.html">PiggyVest, Cowrywise and the Best Savings Apps in Nigeria 2026 Compared</a></h2><p>Which savings app should you trust with your money? We compare the top platforms.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>18.9k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🏋️</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-weightloss.html">The Nigerian Guide to Losing Weight Without a Gym or Expensive Diet Plans</a></h2><p>Here's what actually works for Nigerian bodies and budgets — no gym needed.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>41.6k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🎓</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-asuu.html">ASUU Strikes and the Future of Nigerian Universities: Is It Time for a New Approach?</a></h2><p>Nigerian students have lost years of education to strikes. Experts weigh in on what must change.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>27.3k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🌐</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-makemoney.html">How to Make Money Online in Nigeria in 2026: 10 Legitimate Ways That Actually Work</a></h2><p>The online income streams Nigerians are using to earn in dollars from home.</p><div class="card-meta"><span>9 min read</span><span>•</span><span>67.2k views</span></div></div></div>
+
+
+      <div class="article-card"><div class="thumb">✈️</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-japa.html">The Japa Wave: Why Millions of Nigerians Are Leaving and What It Means for the Country</a></h2><p>Doctors, engineers, and graduates are leaving Nigeria in record numbers. Here is the full picture.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>41.5k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">₿</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-crypto-nigeria.html">Cryptocurrency in Nigeria 2026: What You Can and Cannot Do Legally</a></h2><p>Nigeria has one of the world's largest crypto adoption rates. Here is what the law actually says.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>29.3k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🛒</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-smallbusiness.html">How to Start a Profitable Small Business in Nigeria With ₦50,000 or Less</a></h2><p>Many of Nigeria's most successful entrepreneurs started with very little. Here are businesses you can launch today.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>55.8k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📡</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-5g-nigeria.html">5G in Nigeria: What It Means for You, Your Business, and the Country's Future</a></h2><p>5G networks are expanding across Nigerian cities. Here is what it actually means for ordinary Nigerians.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>18.2k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🍲</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-nigerian-food.html">The Complete Guide to Eating Healthy on a Nigerian Budget in 2026</a></h2><p>Nutritious eating in Nigeria does not require expensive superfoods. Here is how to eat well on any budget.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>32.4k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🏡</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-work-from-home.html">Work From Home in Nigeria: The Complete Guide to Building a Remote Career in 2026</a></h2><p>Remote work opportunities for Nigerians have never been greater. Here is how to find and succeed in one.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>48.1k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🚗</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-lagos-traffic.html">Lagos Traffic: The Hidden Economic Cost and What the Government Must Do</a></h2><p>The average Lagos commuter spends over 30 hours per week in traffic. The economic cost is catastrophic.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>37.9k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">👗</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-naija-fashion.html">Nigerian Fashion Goes Global: How Designers From Lagos Are Dressing the World</a></h2><p>From Lagos runways to international fashion weeks, Nigerian designers are redefining African luxury.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>22.7k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📚</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-university-alternatives.html">Do You Really Need a University Degree in Nigeria in 2026? The Honest Answer</a></h2><p>University degrees are no longer the only path to success. Here is an honest look at the alternatives.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>61.3k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🌾</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-agriculture-nigeria.html">Why Agriculture Is Nigeria's Biggest Untapped Opportunity in 2026</a></h2><p>Nigeria spends billions importing food it could easily grow. Here is the opportunity hiding in plain sight.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>19.8k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">😴</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-sleep-health.html">Why Nigerians Are Not Getting Enough Sleep and the Serious Health Consequences</a></h2><p>Most Nigerians sleep fewer than six hours per night. Here is what it is doing to your health.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>26.4k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🎙️</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-naija-music-business.html">How to Make Money in the Nigerian Music Industry Without Being a Musician</a></h2><p>Nigeria's booming music industry creates wealth for many people who never perform on stage.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>34.6k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">❤️</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-blood-pressure.html">High Blood Pressure: Why It Is Killing Nigerians Silently and What to Do About It</a></h2><p>Hypertension affects one in three Nigerian adults but most do not know they have it.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>28.9k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🏞️</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-nigeria-tourism.html">Hidden Nigeria: 10 Stunning Places That Most Nigerians Have Never Visited</a></h2><p>Nigeria is more beautiful than most of its citizens realise. Here are 10 destinations worth exploring.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>43.2k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🧾</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-tax-nigeria.html">Taxes in Nigeria: What Every Working Nigerian Needs to Know in 2026</a></h2><p>Most Nigerians do not understand the tax system. Here is a clear practical guide to staying compliant.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>17.6k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">💑</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-relationships-money.html">Money and Relationships in Nigeria: How to Have the Conversations That Matter</a></h2><p>Financial disagreements destroy more Nigerian relationships than infidelity. Here is how to talk about it.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>52.1k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🤖</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-ai-jobs.html">Which Nigerian Jobs Are Safe From AI and Which Are at Risk in 2026</a></h2><p>AI is reshaping the Nigerian job market. Here is an honest assessment of where workers stand.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>59.4k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">💍</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-naija-weddings.html">The True Cost of a Nigerian Wedding in 2026 and How to Have One Without Going Broke</a></h2><p>The average Nigerian wedding now costs between ₦5 million and ₦50 million. Here is how to celebrate wisely.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>71.3k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📲</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-fintech-nigeria.html">The Nigerian Fintech Revolution: How Technology Is Changing Banking for 200 Million People</a></h2><p>A decade ago most Nigerians had no bank account. Today fintech is changing everything.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>24.8k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🛢️</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-dangote-refinery.html">The Dangote Refinery: What It Means for Fuel Prices and Nigeria's Economy</a></h2><p>Africa's largest refinery is now operational. Here is the honest truth about what it means for Nigeria.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>38.4k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🌍</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-naija-diaspora.html">The Nigerian Diaspora: How 17 Million Nigerians Abroad Are Shaping the Homeland</a></h2><p>Nigeria's diaspora sends home over $20 billion annually. Here is their full impact on the country.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>29.1k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">⛽</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-generator-income.html">How to Cut Your Generator Costs in Half: Smart Strategies for Nigerian Homes</a></h2><p>The average Nigerian household spends over ₦50,000 monthly on generator fuel. Here is how to cut it.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>44.7k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🏗️</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-real-estate-invest.html">How to Invest in Nigerian Real Estate Without Buying a House</a></h2><p>You do not need millions to invest in Nigerian property. Here are the accessible options in 2026.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>22.3k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">💸</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-sapa.html">Breaking the Sapa Cycle: A Practical Guide to Financial Recovery for Young Nigerians</a></h2><p>If you are always broke before month end, this guide is for you. Here is how to break the cycle.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>67.8k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🍢</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-naija-street-food.html">The Business of Nigerian Street Food: How Suya and Akara Sellers Make Millions</a></h2><p>The suya seller at your junction may be earning more than many office workers. Here is the business.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>51.2k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">💧</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-water-crisis.html">Nigeria's Water Crisis: Why Millions Still Cannot Access Clean Water in 2026</a></h2><p>Over 60 million Nigerians lack access to clean drinking water. Here is why and what is being done.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>19.5k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🏥</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-nigerian-doctors.html">Why Nigeria Is Losing Its Doctors and What It Means for Your Healthcare</a></h2><p>Nigeria has fewer than 40,000 active doctors for 220 million people and thousands more are leaving.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>33.6k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📱</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-social-media-business.html">How to Use Social Media to Grow a Business in Nigeria: The Complete 2026 Guide</a></h2><p>Every Nigerian business owner with a smartphone has the world's most powerful marketing tool. Use it right.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>48.9k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">⌨️</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-naija-tech-skills.html">The 10 Most In-Demand Tech Skills for Nigerians in 2026 and How to Learn Them</a></h2><p>These are the tech skills Nigerian employers and global remote companies are desperate to hire for.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>55.3k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🧒</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-childhood-obesity.html">Childhood Obesity in Nigeria: Why Our Children Are Getting Heavier and What Parents Must Do</a></h2><p>Nigerian children are becoming increasingly overweight. Here is what is causing it and what to do.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>27.4k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">😂</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-naija-comedy.html">How Nigerian Comedy Conquered Social Media and Created a New Generation of Millionaires</a></h2><p>From Instagram skits to Netflix specials, Nigerian comedians are building real empires.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>42.1k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📊</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-forex-business.html">Understanding Forex Trading in Nigeria: What Is Real, What Is Scam, and How to Start Safely</a></h2><p>Forex trading promises fast wealth but delivers ruin for most. Here is the honest truth.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>61.7k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🤰</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-maternal-health.html">Maternal Health in Nigeria: Why Childbirth Is Still Dangerous and What Every Woman Needs to Know</a></h2><p>Nigeria accounts for over 20% of global maternal deaths. Every woman deserves to know the facts.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>36.8k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📦</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-naija-exports.html">Beyond Oil: The Nigerian Products the World Is Buying in 2026</a></h2><p>Nigeria is beginning to export more than oil. Here are the industries building the non-oil economy.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>18.9k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🫘</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-kidney-disease.html">Kidney Disease in Nigeria: The Silent Epidemic and How to Protect Your Kidneys</a></h2><p>Chronic kidney disease affects millions of Nigerians who do not know they have it. Here is what to do.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>24.5k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🌡️</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-climate-nigeria.html">Climate Change and Nigeria: How Rising Temperatures Are Already Affecting Everyday Life</a></h2><p>Climate change is not a future threat for Nigeria. It is a present reality affecting millions today.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>21.3k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🛍️</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-market-women.html">The Untold Story of Nigerian Market Women: How They Build Generational Wealth</a></h2><p>Nigerian market women are some of the country's most sophisticated entrepreneurs. Here is how they operate.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>39.2k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📖</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-secondary-school.html">How to Help Your Child Excel in Nigerian Secondary School: A Parent's Complete Guide</a></h2><p>Nigerian secondary school is more competitive than ever. Here is how parents can actively help.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>46.1k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">📈</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-investing-beginners.html">Investing for Complete Beginners in Nigeria: Where to Start When You Know Nothing</a></h2><p>If you have never invested before and do not know where to start, this guide is specifically for you.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>58.4k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">✈️</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-naija-travel.html">Travelling From Nigeria on a Budget: How to See the World Without Breaking the Bank</a></h2><p>International travel from Nigeria is more affordable than most people think. Here is how to do it.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>43.7k views</span></div></div></div>
+      <div class="article-card"><div class="thumb">🎓</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-naija-graduate.html">Fresh Graduate in Nigeria in 2026: A Survival and Success Guide for Your First Year</a></h2><p>Graduating in Nigeria means entering one of Africa's most competitive job markets. Here is how to navigate it.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>71.6k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🛡️</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-naija-insurance.html">Insurance in Nigeria: Why You Need It and Which Policies Are Actually Worth Buying</a></h2><p>Most Nigerians have no insurance. One accident or illness can wipe out everything they have built.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>22.4k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">💑</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-healthy-marriage.html">What a Healthy Nigerian Marriage Actually Looks Like in 2026</a></h2><p>Nigerian marriages face unique pressures. Here is what the research says makes them actually work.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>48.7k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🍳</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-naija-food-business.html">How to Start a Catering or Food Business in Nigeria and Make It Profitable</a></h2><p>Food is Nigeria's most recession-proof business. Here is how to start one and make it work.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>53.1k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🔒</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-data-privacy.html">Your Data Is Being Collected in Nigeria: What You Need to Know and How to Protect Yourself</a></h2><p>Every app on your phone is collecting data about you. Here is what Nigerian consumers need to know.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>31.6k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🥁</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-yoruba-culture.html">Yoruba Culture in 2026: How One of Africa's Richest Traditions Is Evolving for the Modern World</a></h2><p>Yoruba culture in music, fashion, language, and philosophy is experiencing a global renaissance.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>27.3k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🤝</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-igbo-entrepreneurship.html">The Igbo Business Model: What Every Nigerian Entrepreneur Can Learn From It</a></h2><p>Igbo entrepreneurs have built some of Nigeria's most resilient businesses. Here are the principles.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>44.2k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">👴</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-naija-pension.html">Your Pension in Nigeria: What You Need to Know to Retire Comfortably</a></h2><p>Most Nigerians will reach retirement with almost nothing saved. Here is how to fix that now.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>19.8k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🚦</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-road-safety.html">Road Safety in Nigeria: Why We Lose 40,000 People Every Year and How to Protect Yourself</a></h2><p>Nigeria loses over 40,000 people to road accidents annually. Here is how to protect yourself.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>36.5k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🎧</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-naija-music-streaming.html">How Nigerian Artists Make Money From Streaming in 2026: The Full Breakdown</a></h2><p>Millions of streams but still broke? Here is exactly how streaming revenue works for Nigerian artists.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>41.9k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">⏰</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-productivity-nigeria.html">How to Be More Productive in Nigeria When Everything Is Working Against You</a></h2><p>Power cuts, traffic, and noise make productivity in Nigeria uniquely challenging. Here is what works.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>57.3k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🏡</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-buying-land-nigeria.html">How to Buy Land in Nigeria Without Being Defrauded: The Complete Safety Guide</a></h2><p>Land fraud costs Nigerians billions annually. Here is the complete guide to buying land safely.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>62.1k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">📝</div><div class="card-body"><div class="tag">Tech & AI</div><h2><a href="article-learning-english.html">How Excellent English Skills Can Transform Your Career and Income in Nigeria</a></h2><p>Strong English is not just a language skill in Nigeria — it is a career accelerator and income multiplier.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>38.4k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🌙</div><div class="card-body"><div class="tag">Entertainment</div><h2><a href="article-night-economy.html">Lagos After Dark: The Night Economy and How It Is Creating a New Generation of Entrepreneurs</a></h2><p>Lagos never truly sleeps. Its night economy is generating serious money for a new generation of entrepreneurs.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>33.7k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🩺</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-diabetes-nigeria.html">Diabetes in Nigeria: The Growing Crisis and What Every Nigerian Must Know</a></h2><p>Over 11 million Nigerians have diabetes and most do not know it. Here is how to protect yourself.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>29.5k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🕌</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-hausa-fulani-business.html">Northern Nigeria's Business Scene: The Opportunities Most Southern Nigerians Are Missing</a></h2><p>Northern Nigeria has over 80 million consumers and a rapidly growing middle class. Here is the opportunity.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>21.8k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">👨‍💼</div><div class="card-body"><div class="tag">Naija / Africa</div><h2><a href="article-youth-unemployment.html">Nigeria's Youth Unemployment Crisis: The Causes, The Reality, and What Young People Must Do Now</a></h2><p>Over 33% of Nigerian youth are unemployed. Here is the honest truth and what young people can actually do.</p><div class="card-meta"><span>7 min read</span><span>•</span><span>74.2k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">🧘</div><div class="card-body"><div class="tag">Health</div><h2><a href="article-mental-focus.html">How to Improve Your Focus and Concentration in Nigeria's Most Distracting Environment</a></h2><p>Deep focus is genuinely difficult in Nigeria. Here are science-backed strategies that actually work.</p><div class="card-meta"><span>5 min read</span><span>•</span><span>45.6k views</span></div></div></div>
+
+      <div class="article-card"><div class="thumb">💵</div><div class="card-body"><div class="tag">Finance</div><h2><a href="article-naija-loans.html">Loans in Nigeria in 2026: Which Ones to Take, Which to Avoid, and How to Borrow Smartly</a></h2><p>Not all loans in Nigeria are equal. Here is a complete guide to borrowing without destroying your finances.</p><div class="card-meta"><span>6 min read</span><span>•</span><span>58.9k views</span></div></div></div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="widget">
+      <div class="widget-title">Trending Now</div>
+      <div class="trend-item"><div class="trend-num">1</div><p>Dangote Refinery Cuts Fuel Prices Again</p></div>
+      <div class="trend-item"><div class="trend-num">2</div><p>Peter Obi's New Business Initiative Launches</p></div>
+      <div class="trend-item"><div class="trend-num">3</div><p>EFCC Arrests 200 in Cyber Fraud Crackdown</p></div>
+      <div class="trend-item"><div class="trend-num">4</div><p>Super Eagles Star Signs €40M European Deal</p></div>
+      <div class="trend-item"><div class="trend-num">5</div><p>New Solar Grid Powers 3 Nigerian States</p></div>
+    </div>
+    <div class="widget">
+      <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5847377708766349" data-ad-slot="auto"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div class="widget">
+      <div class="widget-title">Newsletter</div>
+      <p style="font-size:13px;color:#888;margin-bottom:10px;">Get top Nigerian stories delivered daily.</p>
+      <input class="newsletter-input" type="email" placeholder="Your email address" />
+      <button class="btn-sub">Subscribe Free</button>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-logo">Naija<span>Buzz</span></div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="advertise.html">Advertise</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 NaijaBuzz. Your #1 Source for News, Finance, Tech & Culture. Built with ❤ in Lagos.</p>
+</footer>
+
+</body>
+</html>
